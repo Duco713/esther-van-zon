@@ -414,15 +414,19 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
         <!-- Dr. Spiller -->
-        <article class="bg-surface-container rounded-2xl p-8 card-shadow flex flex-col transition-transform hover:-translate-y-2 duration-300 lg:col-span-2">
-          <div class="flex-grow flex flex-col md:flex-row gap-8 items-center">
+        <article class="bg-surface-container rounded-2xl p-8 card-shadow flex flex-col transition-transform duration-300 lg:col-span-2">
+          <div class="flex flex-col md:flex-row gap-8 items-center">
             <div class="w-full md:w-1/2">
               <h3 class="font-headline-md text-headline-md text-primary mb-4">Dr. Spiller</h3>
               <p class="font-body-md text-body-md text-on-surface-variant mb-6">
                 Dr. Spiller natuurlijke huidverzorging voor gezicht en lichaam. Ervaar de biomimetische benadering van huidverzorging die de natuurlijke functies van de huid ondersteunt en versterkt.
               </p>
+              <button class="lees-meer-btn inline-flex items-center gap-1 text-secondary font-semibold hover:text-primary transition-colors" aria-expanded="false">
+                <span class="lm-label">Lees meer</span>
+                <span class="material-symbols-outlined text-base transition-transform">expand_more</span>
+              </button>
             </div>
             <div class="w-full md:w-1/2 flex justify-center">
               <div class="w-48 h-48 bg-primary/10 product-shape-1 overflow-hidden relative">
@@ -430,53 +434,83 @@
               </div>
             </div>
           </div>
+          <div class="lees-meer-inhoud hidden mt-8 pt-8 border-t border-outline-variant space-y-4 font-body-md text-body-md text-on-surface-variant">
+            <p>Wie wil er niet verzorgd uitzien en vroegtijdige rimpeltjes te lijf gaan? Een dagelijkse verzorging met goede cosmetica is daarbij van belang. Dr. Spiller is al ruim vijftig jaar actief op het gebied van cosmetica en werkt in een eigen laboratorium voortdurend aan de verfijning en uitbreiding van de producten. Het assortiment omvat ruim 170 producten voor huidverzorging.</p>
+            <p>Er is een brede verzorgingslijn voor iedere huid, ook voor probleemhuiden zoals acne, couperose en overgevoelige huiden die nauwelijks iets kunnen verdragen. Voor het lichaam zijn er heerlijke bodyproducten, hand- en voetcrèmes. De huid is steeds het uitgangspunt: nagenoeg alle crèmes zijn op basis van een water-in-olie-emulsie, die beter door de huid wordt opgenomen. Daardoor werken de werkstoffen langer en effectiever. De producten staan bekend om hun milde, aangename geur, makkelijke opname en hoge verdraagzaamheid, met een minimum aan emulgatoren en conserveringsmiddelen en zoveel mogelijk natuurlijke ingrediënten.</p>
+            <p>Dr. Spiller is meermaals onderscheiden met Beauty Awards voor baanbrekend werk in de huidverzorging, met een uitstekende prijs-kwaliteitverhouding. De dag- en anti-agingcrèmes variëren bijvoorbeeld tussen € 24,- en € 65,-; de exclusieve, celvernieuwende lijnen (Seiden, Celltresor en Cellosophy) liggen tussen € 83,50 en € 155,-.</p>
+            <p>Er zijn verschillende 24-uurscrèmes voor dag én nacht, en een ruime keuze in reiniging, serums, maskers en oogverzorging. Alle producten zijn sterk geconcentreerd, dus u heeft er maar weinig van nodig en doet er lang mee. Voor iedereen die interesse heeft, geef ik graag een persoonlijk en vrijblijvend huidadvies.</p>
+            <p>De nieuwste lijn 'Alpenrausch' gebruikt bio-geteelde plantaardige ingrediënten uit de Alpen en draagt het Cosmos Organic keurmerk. Alleen met dit keurmerk mag een product zich écht 'biologisch' noemen: puur natuur. Deze unieke lijn omvat zo'n 22 producten voor gezicht en lichaam voor thuisgebruik. In de salon kunt u terecht voor speciale Alpenrausch-behandelingen in twee varianten, voor wie gaat voor 100% biologisch en een heerlijke geurbeleving.</p>
+          </div>
         </article>
         <!-- Courtin -->
-        <article class="bg-surface-container-high rounded-2xl p-8 card-shadow flex flex-col transition-transform hover:-translate-y-2 duration-300">
+        <article class="bg-surface-container-high rounded-2xl p-8 card-shadow flex flex-col transition-transform duration-300">
           <div class="flex-grow flex flex-col items-center text-center">
             <div class="w-32 h-32 bg-secondary/10 rounded-full overflow-hidden relative mb-6">
               <img class="absolute inset-0 w-full h-full object-cover" alt="Courtin tea tree producten" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOiycQiLc9aL2l-rizMMpqSQFq8JP2rlszYCmPWqOThs0PusbdyAUN6eWUMJqZCAWaL-d35mh9xWVXUE6O84xJacxv3kdPE1XDMp1C8jnABHSHUCLuHZoai8oK2DW0qm2A5U_x30HeVJfweNU8gi1blkgbdLYkRh1f2ZxUPt-4v1xJLsL9iZ9E8zg44V8A1KuAbEsUWO-stxmANEugkN0JWuDl0A2dftelBn1wKo3vBZGh82Bz9x25l9sKSeJ-wMgnEPeAqbTgv2E"/>
             </div>
             <h3 class="font-headline-sm text-headline-sm text-primary mb-3">Courtin</h3>
-            <p class="font-body-md text-body-md text-on-surface-variant">
+            <p class="font-body-md text-body-md text-on-surface-variant mb-4">
               Natuurlijke huid- en voetverzorging op basis van pure tea tree olie.
             </p>
+            <button class="lees-meer-btn inline-flex items-center gap-1 text-secondary font-semibold hover:text-primary transition-colors" aria-expanded="false">
+              <span class="lm-label">Lees meer</span>
+              <span class="material-symbols-outlined text-base transition-transform">expand_more</span>
+            </button>
           </div>
         </article>
         <!-- LavieSage -->
-        <article class="bg-surface-variant rounded-2xl p-8 card-shadow flex flex-col transition-transform hover:-translate-y-2 duration-300">
+        <article class="bg-surface-variant rounded-2xl p-8 card-shadow flex flex-col transition-transform duration-300">
           <div class="flex-grow flex flex-col items-center text-center">
             <div class="w-32 h-32 bg-tertiary/10 rounded-xl rotate-3 overflow-hidden relative mb-6">
               <img class="absolute inset-0 w-full h-full object-cover -rotate-3" alt="LavieSage nutricosmetica" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDg2GcQWDjLXJ4mKBYIGBG4TcDVmjv-bRAxxX2GDwCqXX0jHq8ZyJdxpiOvdkesZxanDWJnQTuVvycPq55-gXdFy-xzLSmUzhi6hKbfc351r-fvSMScs3zIt0aBQhe8s8dwZNN2bU4xmDqMUNqcfx_GtJ2jTcARdWufJnqRwE9jEghkLB9NB4mntmUxvg1v-z-CFn1HGXUN6mPSJGz_DMciQ4r0txrxCDWwHbYTQaBPltORVEFZvv2rBdxE-47yjjMUb5c8pSsy-60"/>
             </div>
             <h3 class="font-headline-sm text-headline-sm text-primary mb-3">LavieSage</h3>
-            <p class="font-body-md text-body-md text-on-surface-variant">
+            <p class="font-body-md text-body-md text-on-surface-variant mb-4">
               Natuurlijke voeding voor uw huid en huidverbetering van binnenuit.
             </p>
+            <button class="lees-meer-btn inline-flex items-center gap-1 text-secondary font-semibold hover:text-primary transition-colors" aria-expanded="false">
+              <span class="lm-label">Lees meer</span>
+              <span class="material-symbols-outlined text-base transition-transform">expand_more</span>
+            </button>
           </div>
         </article>
         <!-- Mycocure -->
-        <article class="bg-surface-container rounded-2xl p-8 card-shadow flex flex-col transition-transform hover:-translate-y-2 duration-300">
+        <article class="bg-surface-container rounded-2xl p-8 card-shadow flex flex-col transition-transform duration-300">
           <div class="flex-grow flex flex-col items-center text-center">
             <div class="w-32 h-32 bg-primary/10 product-shape-2 overflow-hidden relative mb-6">
               <img class="absolute inset-0 w-full h-full object-cover" alt="Mycocure en ProntoMan voetverzorging" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxoMKdKV-j6qcAmhI-0aeH0OgQZXOPH-jMUC905JiOXaPKrPMwvFG6I_Hbc0Uu3gqznA-0LWXEIHdovQeKgFO5ihGpN5D58roWUGyOXYqLENRjU9OH3qwPXmcJPNoxXR7XT9mRPmxSBrg2mcOcEKlGNNvKRozB2d6SadklJo07UVLEuGSTfXbENDWFpRMUP4tht7gxx1_lLCgoF-qxSHgP1op5SILAeSOH8X7xUsEx_irCtWrppj4KkSD2HrxzoZQFxEmgPZWMKsU"/>
             </div>
             <h3 class="font-headline-sm text-headline-sm text-primary mb-3">Mycocure &amp; ProntoMan</h3>
-            <p class="font-body-md text-body-md text-on-surface-variant">
+            <p class="font-body-md text-body-md text-on-surface-variant mb-4">
               Speciaal voor schimmelnagels en voetschimmel.
             </p>
+            <button class="lees-meer-btn inline-flex items-center gap-1 text-secondary font-semibold hover:text-primary transition-colors" aria-expanded="false">
+              <span class="lm-label">Lees meer</span>
+              <span class="material-symbols-outlined text-base transition-transform">expand_more</span>
+            </button>
           </div>
         </article>
         <!-- Golden Rose -->
-        <article class="bg-secondary-fixed rounded-2xl p-8 card-shadow flex flex-col transition-transform hover:-translate-y-2 duration-300">
-          <div class="flex-grow flex flex-col items-center text-center">
+        <article class="bg-secondary-fixed rounded-2xl p-8 card-shadow flex flex-col transition-transform duration-300">
+          <div class="flex flex-col items-center text-center">
             <div class="w-full h-40 bg-surface-container rounded-xl overflow-hidden relative mb-6">
               <img class="absolute inset-0 w-full h-full object-cover" alt="Golden Rose make-up" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVJtrhJj4c1xUy7RXQs8PPjFJ4pB0QGvoPacSDsbG0DJcHPZP8DdSyA3wKbH9uQntA_rxYOuJyWufGBndrSaYdAgVfNwslv4_HMSMqeqqEdz_ZrBAGVpL2XNJsLj1PpGz43lr59b3CqwdH7tXDX2y9CwvPxd4uq3KZIcb5qzNz0uwh1YkHP1FbyDf_vOhAiBS99CGoZWAfupPzfOUcrJUpBvNq43T8AzaxpWw9nC2Gzyl-Ogwd53lkCeMv_JNyR2UY1vQH5jheUQg"/>
             </div>
             <h3 class="font-headline-sm text-headline-sm text-primary mb-3">Golden Rose Cosmetics</h3>
-            <p class="font-body-md text-body-md text-on-surface-variant">
+            <p class="font-body-md text-body-md text-on-surface-variant mb-4">
               Schitterende en betaalbare make-up voor een stralende look.
             </p>
+            <button class="lees-meer-btn inline-flex items-center gap-1 text-secondary font-semibold hover:text-primary transition-colors" aria-expanded="false">
+              <span class="lm-label">Lees meer</span>
+              <span class="material-symbols-outlined text-base transition-transform">expand_more</span>
+            </button>
+          </div>
+          <div class="lees-meer-inhoud hidden mt-6 pt-6 border-t border-on-surface-variant/20 space-y-4 font-body-md text-body-md text-on-surface-variant text-left">
+            <p>Golden Rose Cosmetics startte in 1983 met de productie van exclusieve cosmetica voor de uiterlijke verzorging.</p>
+            <p>Door lage overheadkosten, een efficiënt inkoopbeleid en een effectieve werkwijze blijft de prijs aantrekkelijk, zonder in te leveren op kwaliteit.</p>
+            <p>Naast prijs en kwaliteit hecht Golden Rose veel waarde aan de gezondheid van de gebruiker: de producten zijn dierproefvrij, dermatologisch getest en goedgekeurd volgens de strenge Europese normen.</p>
+            <p>De producten worden exclusief verkocht via schoonheidssalons, visagisten en andere exclusieve zaken.</p>
+            <p>Vraag Esther of Gwenny gerust eens om een persoonlijk make-upadvies!</p>
           </div>
         </article>
       </div>
@@ -879,6 +913,18 @@
     if (!newsletterForm.checkValidity()) { newsletterForm.reportValidity(); return; }
     document.getElementById('newsletter-msg').classList.remove('hidden');
     newsletterForm.reset();
+  });
+
+  // ---- Lees meer / minder (product-uitklap) ----
+  document.querySelectorAll('.lees-meer-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const panel = btn.closest('article').querySelector('.lees-meer-inhoud');
+      if (!panel) return; // knop zonder inhoud (volgt later)
+      const open = panel.classList.toggle('hidden') === false;
+      btn.setAttribute('aria-expanded', String(open));
+      btn.querySelector('.lm-label').textContent = open ? 'Lees minder' : 'Lees meer';
+      btn.querySelector('.material-symbols-outlined').classList.toggle('rotate-180', open);
+    });
   });
 </script>
 </body>
