@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="nl">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Schoonheidssalon Esther van Zon — Een oase van rust in Dommelen</title>
+<meta name="description" content="Al ruim 26 jaar dé schoonheidssalon in Dommelen. Gezichtsbehandelingen, huidverbetering, massages, pedicure en natuurlijke producten van Dr. Spiller."/>
+
+<!-- Google Fonts: Manrope & Playfair Display -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "surface-container": "#efeee9",
+          "secondary": "#715a48",
+          "primary-fixed": "#e0e5cc",
+          "on-tertiary-fixed": "#1c1d0c",
+          "surface-tint": "#5c614d",
+          "on-primary-container": "#eff4db",
+          "tertiary-container": "#6f6f5a",
+          "on-secondary": "#ffffff",
+          "secondary-fixed-dim": "#e0c1ab",
+          "primary": "#535845",
+          "surface-container-high": "#e9e8e3",
+          "secondary-fixed": "#fddcc6",
+          "on-secondary-fixed-variant": "#584232",
+          "on-primary-fixed-variant": "#444937",
+          "on-surface": "#1b1c19",
+          "inverse-primary": "#c4c9b1",
+          "surface-container-highest": "#e3e3de",
+          "primary-fixed-dim": "#c4c9b1",
+          "inverse-on-surface": "#f2f1ec",
+          "surface-dim": "#dbdad5",
+          "primary-container": "#6b705c",
+          "error": "#ba1a1a",
+          "on-primary": "#ffffff",
+          "inverse-surface": "#30312e",
+          "outline-variant": "#c7c7bd",
+          "surface": "#faf9f4",
+          "background": "#faf9f4",
+          "secondary-container": "#fddcc6",
+          "surface-container-lowest": "#ffffff",
+          "on-background": "#1b1c19",
+          "tertiary-fixed-dim": "#c8c8af",
+          "on-tertiary-container": "#f4f3d8",
+          "on-tertiary": "#ffffff",
+          "surface-variant": "#e3e3de",
+          "on-secondary-fixed": "#28180b",
+          "outline": "#77786f",
+          "error-container": "#ffdad6",
+          "on-tertiary-fixed-variant": "#474835",
+          "on-error-container": "#93000a",
+          "on-secondary-container": "#785f4e",
+          "on-surface-variant": "#464740",
+          "tertiary": "#565743",
+          "surface-container-low": "#f5f4ef",
+          "surface-bright": "#faf9f4",
+          "on-error": "#ffffff",
+          "on-primary-fixed": "#191d0e",
+          "tertiary-fixed": "#e5e4ca"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "section-gap-mobile": "64px",
+          "gutter": "24px",
+          "section-gap-desktop": "120px",
+          "container-max-width": "1200px",
+          "base": "8px"
+        },
+        "fontFamily": {
+          "body-lg": ["Manrope"],
+          "headline-sm": ["Playfair Display"],
+          "headline-md": ["Playfair Display"],
+          "display-lg-mobile": ["Playfair Display"],
+          "label-caps": ["Manrope"],
+          "body-md": ["Manrope"],
+          "display-lg": ["Playfair Display"]
+        },
+        "fontSize": {
+          "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+          "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+          "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+          "display-lg-mobile": ["36px", {"lineHeight": "1.2", "fontWeight": "500"}],
+          "label-caps": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "700"}],
+          "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+          "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "500"}]
+        }
+      }
+    }
+  }
+</script>
+<style>
+  /* ---- Shared utilities ---- */
+  .glass-nav {
+    background-color: rgba(250, 249, 244, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  .soft-shadow,
+  .card-shadow {
+    box-shadow: 0px 10px 30px rgba(107, 112, 92, 0.08);
+  }
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+
+  /* Offset for the fixed navbar when jumping to a section */
+  section[id] { scroll-margin-top: 96px; }
+
+  /* ---- Hero (Home) animated blobs ---- */
+  .organic-shape-morph {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    animation: morph 8s ease-in-out infinite;
+  }
+  @keyframes morph {
+    0%   { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+    50%  { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+    100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+  }
+
+  /* ---- Salon section ---- */
+  .salon-shape-1 { border-radius: 50% 50% 50% 50% / 60% 40% 60% 40%; }
+
+  /* ---- About / Over Esther ---- */
+  .about-shape-1 { border-radius: 53% 47% 34% 66% / 44% 39% 61% 56%; }
+  .about-shape-2 { border-radius: 41% 59% 46% 54% / 54% 46% 54% 46%; }
+
+  /* ---- Products ---- */
+  .product-shape-1 { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+  .product-shape-2 { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+
+  /* ---- Treatments ---- */
+  .treatment-shape { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+  .glass-panel {
+    background: rgba(250, 249, 244, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(113, 90, 72, 0.1);
+  }
+
+  /* ---- News ---- */
+  .news-shape-1 { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+  .news-shape-2 { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+
+  /* ---- Contact ---- */
+  .contact-shape { border-radius: 50% 50% 50% 50% / 60% 40% 60% 40%; }
+  .input-underline {
+    border: none;
+    border-bottom: 1px solid #715a48;
+    background: transparent;
+    border-radius: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .input-underline:focus {
+    outline: none;
+    box-shadow: none;
+    border-bottom-color: #535845;
+  }
+
+  /* Active nav link */
+  .nav-link.is-active {
+    color: #535845;
+    font-weight: 600;
+    border-bottom: 2px solid #535845;
+    padding-bottom: 0.25rem;
+  }
+</style>
+</head>
+
+<body class="bg-surface text-on-surface font-body-lg antialiased selection:bg-primary-container selection:text-on-primary-container">
+
+<!-- ============ TopNavBar ============ -->
+<header class="fixed top-0 w-full z-50 glass-nav shadow-sm transition-all duration-300">
+  <div class="flex justify-between items-center px-gutter py-4 max-w-container-max-width mx-auto">
+    <a class="font-headline-sm text-headline-sm tracking-widest text-primary hover:opacity-80 transition-opacity" href="#home">
+      ESTHER VAN ZON
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex items-center space-x-8 font-body-lg text-body-lg">
+      <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-300" href="#home">Home</a>
+      <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-300" href="#salon">Salon</a>
+      <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-300" href="#about">Over Esther</a>
+      <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-300" href="#products">Producten</a>
+      <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-300" href="#treatments">Behandelingen</a>
+      <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-300" href="#news">Nieuws</a>
+      <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-300" href="#contact">Contact</a>
+    </nav>
+
+    <!-- Trailing Action -->
+    <div class="hidden md:block">
+      <a class="inline-flex items-center justify-center px-6 py-3 bg-primary text-on-primary rounded-full hover:bg-primary/90 transition-colors duration-300 font-medium" href="#contact">
+        Maak een afspraak
+      </a>
+    </div>
+
+    <!-- Mobile Menu Toggle -->
+    <button id="menu-toggle" aria-label="Menu" aria-expanded="false" class="md:hidden text-primary p-2">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <nav id="mobile-menu" class="hidden md:hidden glass-nav border-t border-outline-variant/40 px-gutter py-4 flex-col space-y-3 font-body-lg text-body-lg">
+    <a class="block text-on-surface-variant hover:text-primary transition-colors" href="#home">Home</a>
+    <a class="block text-on-surface-variant hover:text-primary transition-colors" href="#salon">Salon</a>
+    <a class="block text-on-surface-variant hover:text-primary transition-colors" href="#about">Over Esther</a>
+    <a class="block text-on-surface-variant hover:text-primary transition-colors" href="#products">Producten</a>
+    <a class="block text-on-surface-variant hover:text-primary transition-colors" href="#treatments">Behandelingen</a>
+    <a class="block text-on-surface-variant hover:text-primary transition-colors" href="#news">Nieuws</a>
+    <a class="block text-on-surface-variant hover:text-primary transition-colors" href="#contact">Contact</a>
+    <a class="inline-flex items-center justify-center px-6 py-3 bg-primary text-on-primary rounded-full hover:bg-primary/90 transition-colors font-medium w-full" href="#contact">Maak een afspraak</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ============ HERO / HOME ============ -->
+  <section id="home" class="relative min-h-screen flex items-center justify-center pt-28 pb-16 bg-surface-container-low overflow-hidden">
+    <!-- Decorative organic background elements -->
+    <div class="absolute top-1/4 -right-20 w-96 h-96 bg-secondary-fixed opacity-40 organic-shape-morph blur-3xl"></div>
+    <div class="absolute -bottom-20 -left-20 w-[30rem] h-[30rem] bg-primary-fixed opacity-30 organic-shape-morph blur-3xl"></div>
+
+    <div class="max-w-container-max-width mx-auto px-gutter grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
+      <div class="space-y-8 max-w-2xl">
+        <span class="font-label-caps text-label-caps text-primary tracking-widest uppercase">Welkom in de salon</span>
+        <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary leading-tight">
+          Ziet u er goed uit omdat u zich goed voelt… of voelt u zich goed omdat u er goed uit ziet?
+        </h1>
+        <p class="text-on-surface-variant text-lg">
+          Iedereen heeft een huid. Om deze mooi en in een goede conditie te brengen en vooral ook te houden is een goede huidverzorging essentieel. Ontdek de balans tussen innerlijke rust en uiterlijke verzorging.
+        </p>
+        <div class="pt-4 flex flex-col sm:flex-row gap-4">
+          <a class="inline-flex items-center justify-center px-8 py-4 bg-primary text-on-primary rounded-full hover:bg-primary/90 transition-all duration-300 soft-shadow" href="#treatments">
+            Ontdek Behandelingen
+          </a>
+          <a class="inline-flex items-center justify-center px-8 py-4 border border-outline text-primary rounded-full hover:bg-surface-variant transition-all duration-300" href="#contact">
+            Neem Contact Op
+          </a>
+        </div>
+      </div>
+
+      <div class="relative w-full aspect-[4/5] md:aspect-square rounded-[2rem] overflow-hidden soft-shadow">
+        <img class="object-cover w-full h-full transform hover:scale-105 transition-transform duration-700 ease-out" alt="Serene spa-omgeving met behandelbed en natuurlijk licht" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALbx5bB50jmUG71suv-ImBy1icTikYrrGJQZccDmwUYBjK1tsH0OHAjHTmDxuktVB_JmbCOn1qe4XkDrNnx0wSNFvvicj0SGB-ZFCccbzJK3k7OC_-KqNk-mTviz-jwJ63soahr0mYAfnLGlcntVx3gKdFybpnxfXiIvZ9rMi8VvkiXCfBThLHV02MgR1JcAuid_1KX81rlZYfBvoRecekOgpEt-GWf4hERFPZNVL0KMZhVqjQmX1IXn0G5wwoF08efveFeMOIdhg"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wavy divider -> surface-container -->
+  <div class="w-full relative -mt-1 z-20">
+    <svg class="w-full h-auto text-surface-container fill-current block" preserveAspectRatio="none" viewBox="0 0 1440 120">
+      <path d="M0,0 C320,120 420,120 720,60 C1020,0 1120,0 1440,60 L1440,120 L0,120 Z"></path>
+    </svg>
+  </div>
+
+  <!-- ============ PHILOSOPHY / NEEDS (Bento) ============ -->
+  <section class="bg-surface-container py-section-gap-mobile md:py-section-gap-desktop relative z-10">
+    <div class="max-w-container-max-width mx-auto px-gutter">
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-6">
+        <h2 class="font-headline-md text-headline-md text-primary">Persoonlijke aandacht voor uw unieke huid</h2>
+        <p class="text-on-surface-variant">
+          Uw huidconditie verandert onder invloed van stress en dagelijkse omstandigheden. Wij bieden een rustpunt en eerlijk advies afgestemd op wat ú nodig heeft.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-surface p-8 rounded-[1.5rem] soft-shadow flex flex-col items-start gap-4 hover:-translate-y-1 transition-transform duration-300">
+          <div class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">face_retouching_natural</span>
+          </div>
+          <h3 class="font-headline-sm text-headline-sm text-primary text-xl">Huidverbetering</h3>
+          <p class="text-on-surface-variant flex-grow">
+            Wilt u uw huid verbeteren, fijne lijntjes beperken en zorgen dat deze er fris &amp; stralend uit blijft zien?
+          </p>
+        </div>
+        <div class="bg-surface p-8 rounded-[1.5rem] soft-shadow flex flex-col items-start gap-4 hover:-translate-y-1 transition-transform duration-300">
+          <div class="w-12 h-12 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">self_improvement</span>
+          </div>
+          <h3 class="font-headline-sm text-headline-sm text-primary text-xl">Relaxmoment</h3>
+          <p class="text-on-surface-variant flex-grow">
+            Wilt u even ontkomen aan de dagelijkse sleur en genieten van een moment van rust en ontspanning voor uzelf?
+          </p>
+        </div>
+        <div class="bg-surface p-8 rounded-[1.5rem] soft-shadow flex flex-col items-start gap-4 hover:-translate-y-1 transition-transform duration-300">
+          <div class="w-12 h-12 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">health_and_safety</span>
+          </div>
+          <h3 class="font-headline-sm text-headline-sm text-primary text-xl">Eerlijk Advies</h3>
+          <p class="text-on-surface-variant flex-grow">
+            Wilt u het beste voor uw huid met persoonlijke aandacht en geholpen worden aan specifieke huidproblemen?
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wavy divider -> surface -->
+  <div class="w-full relative -mt-1 z-20 bg-surface-container">
+    <svg class="w-full h-auto text-surface fill-current block transform rotate-180" preserveAspectRatio="none" viewBox="0 0 1440 120">
+      <path d="M0,0 C320,120 420,120 720,60 C1020,0 1120,0 1440,60 L1440,120 L0,120 Z"></path>
+    </svg>
+  </div>
+
+  <!-- ============ SALON / DE LOCATIE ============ -->
+  <section id="salon" class="max-w-container-max-width mx-auto px-gutter py-section-gap-mobile md:py-section-gap-desktop">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <div class="order-2 md:order-1 relative">
+        <div class="salon-shape-1 overflow-hidden relative z-10 w-full aspect-square soft-shadow">
+          <img class="w-full h-full object-cover" alt="Lichte behandelruimte met uitzicht op de tuin" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLtwVBPyq5S43p0IpeZau-ewRrivENXiTDpwxCRK5-yVnGNnFd07SiMGRspPrGW9Fuz0c-_x_WdJYgEf_htuVLEvVQaDr2jSDUmOpSNnxRZy5We0VwekC3dGT2vH4Okl9E2r-mQLfXmK9SkWhuVBbkIeh6hU79Bdq-URkBbvpK7JjVbLxTqQLLCT83VbRf3RHl8IovsHq68ro8x7vMBrgEMeOIjThhHW2KBYd76_l8OoAK_nrv01_ylIfVtZ8p69qHv8SU5m_TH-w"/>
+        </div>
+        <div class="absolute -bottom-8 -left-8 w-32 h-32 rounded-full bg-secondary-fixed/50 z-0 blur-2xl"></div>
+      </div>
+      <div class="order-1 md:order-2">
+        <span class="font-label-caps text-label-caps text-secondary tracking-widest uppercase">De Salon</span>
+        <h2 class="font-headline-md text-headline-md text-primary mb-6 mt-2">De Locatie</h2>
+        <p class="font-body-md text-body-md text-on-surface-variant mb-6">
+          Sinds 15 jaar is de salon gevestigd op de huidige locatie, Fresiapad 13 in oud-Dommelen. De salon bevindt zich aan de zijkant van het woonhuis met een aparte entree, wachtkamer, en een mooie lichte behandelruimte met uitzicht op de tuin.
+        </p>
+        <p class="font-body-md text-body-md text-on-surface-variant mb-8">
+          De salon straalt rust en warmte uit. Een heerlijke ruimte om even te ontspannen en bij te komen, weg van de dagelijkse drukte.
+        </p>
+        <div class="flex gap-4">
+          <div class="bg-surface-container rounded-xl p-4 flex items-center gap-3 w-1/2">
+            <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">spa</span>
+            <span class="font-label-caps text-label-caps text-on-surface">Lichte Ruimte</span>
+          </div>
+          <div class="bg-surface-container rounded-xl p-4 flex items-center gap-3 w-1/2">
+            <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">nature</span>
+            <span class="font-label-caps text-label-caps text-on-surface">Tuinzicht</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OVER ESTHER / ABOUT ============ -->
+  <section id="about" class="bg-surface-container py-section-gap-mobile md:py-section-gap-desktop px-gutter">
+    <div class="max-w-container-max-width mx-auto">
+      <!-- Intro -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
+        <div class="order-2 md:order-1 space-y-6">
+          <p class="font-label-caps text-label-caps text-secondary tracking-widest uppercase">Over Esther</p>
+          <h2 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-primary">
+            Passie voor Huidverbetering
+          </h2>
+          <p class="text-on-surface-variant font-body-lg text-body-lg">
+            Al ruim 26 jaar is schoonheidssalon Esther van Zon een begrip in Dommelen en omstreken. Wat begon in een tuinstoel op mijn slaapkamer is uitgegroeid tot een professionele oase van rust.
+          </p>
+        </div>
+        <div class="order-1 md:order-2 flex justify-center relative">
+          <div class="absolute inset-0 bg-secondary-fixed/30 about-shape-1 scale-110 -z-10"></div>
+          <img alt="Esther van Zon" class="w-full max-w-md aspect-[4/5] object-cover about-shape-2 shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSUhcjrMJ-BpliNHUDZH93iv2l5Wi1d_Pt9Fy2DLQ5DoY5QPsD2OsP4M1gYh1OhCvymiH_Oi2rWHI_S8vFRbKgP8ka4D0h82z3fHNkzckxx2oSDhGOm0jnBdjArD0yb5Zica1ZuuXH6QpZvCCA4ye15RLSdp8H4m2pcxmZPm827q6bXjeg30efzohI3YnJtdp7Ht_lNnZbGLjg5gZ282qKX_GX_JVlB6_WekB3MYhM7o9uvS94Ps8K3m79m5jgeBSVpDhjB7nQcUg"/>
+        </div>
+      </div>
+
+      <!-- Journey (Bento Grid) -->
+      <div class="text-center mb-16">
+        <h3 class="font-headline-md text-headline-md text-primary mb-4">Mijn Reis</h3>
+        <p class="max-w-2xl mx-auto text-on-surface-variant">Continue ontwikkeling en een passie voor het vak vormen de basis van mijn salon.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-surface rounded-2xl p-8 soft-shadow flex flex-col items-start md:col-span-2">
+          <div class="bg-tertiary-fixed text-on-tertiary-fixed w-12 h-12 rounded-full flex items-center justify-center mb-6">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">school</span>
+          </div>
+          <h4 class="font-headline-sm text-headline-sm text-primary mb-3">Opleiding &amp; Ervaring</h4>
+          <p class="text-on-surface-variant text-body-md font-body-md">
+            Mijn basis ligt bij de opleiding uiterlijke verzorging &amp; pedicure aan het MDGO. Daarna volgde de praktijk PLUS opleiding aan het Thomas College, en diverse specialisaties waaronder dermatologie en diabetische voet. Direct na mijn opleiding deed ik waardevolle ervaring op bij diverse grote sauna's in de regio.
+          </p>
+        </div>
+        <div class="bg-primary text-on-primary rounded-2xl p-8 soft-shadow flex flex-col items-start justify-center">
+          <h4 class="font-display-lg text-display-lg mb-2">26+</h4>
+          <p class="font-label-caps text-label-caps tracking-widest opacity-80 uppercase">Jaar Ervaring</p>
+        </div>
+        <div class="bg-surface rounded-2xl p-8 soft-shadow flex flex-col items-start">
+          <div class="bg-secondary-fixed text-on-secondary-fixed w-12 h-12 rounded-full flex items-center justify-center mb-6">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">spa</span>
+          </div>
+          <h4 class="font-headline-sm text-headline-sm text-primary mb-3">De Salon</h4>
+          <p class="text-on-surface-variant text-body-md font-body-md">
+            Sinds 15 jaar gevestigd op de huidige locatie, Fresiapad 13. Een lichte, rustgevende ruimte met uitzicht op de tuin, voorzien van een aparte entree en wachtkamer.
+          </p>
+        </div>
+        <div class="bg-surface rounded-2xl p-8 soft-shadow flex flex-col items-start md:col-span-2">
+          <div class="bg-tertiary-fixed text-on-tertiary-fixed w-12 h-12 rounded-full flex items-center justify-center mb-6">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">local_florist</span>
+          </div>
+          <h4 class="font-headline-sm text-headline-sm text-primary mb-3">Natuurlijke Producten</h4>
+          <p class="text-on-surface-variant text-body-md font-body-md">
+            Ik werk met het 'natuurlijke' merk Dr. Spiller, inclusief de biologische "alpenrauschlijn" op basis van alpenkruiden. Uitgebreid getraind om u het beste, vrijblijvende advies te geven voor thuisgebruik.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRODUCTEN ============ -->
+  <section id="products" class="bg-surface py-section-gap-mobile md:py-section-gap-desktop">
+    <div class="px-gutter max-w-container-max-width mx-auto">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-primary mb-6">Onze Producten</h2>
+        <p class="font-body-lg text-body-lg text-on-surface-variant">
+          Ontdek onze zorgvuldig geselecteerde lijn van hoogwaardige huidverzorgingsproducten en cosmetica, speciaal gekozen voor optimale resultaten en natuurlijke schoonheid.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Dr. Spiller -->
+        <article class="bg-surface-container rounded-2xl p-8 card-shadow flex flex-col transition-transform hover:-translate-y-2 duration-300 lg:col-span-2">
+          <div class="flex-grow flex flex-col md:flex-row gap-8 items-center">
+            <div class="w-full md:w-1/2">
+              <h3 class="font-headline-md text-headline-md text-primary mb-4">Dr. Spiller</h3>
+              <p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                Dr. Spiller natuurlijke huidverzorging voor gezicht en lichaam. Ervaar de biomimetische benadering van huidverzorging die de natuurlijke functies van de huid ondersteunt en versterkt.
+              </p>
+            </div>
+            <div class="w-full md:w-1/2 flex justify-center">
+              <div class="w-48 h-48 bg-primary/10 product-shape-1 overflow-hidden relative">
+                <img class="absolute inset-0 w-full h-full object-cover" alt="Dr. Spiller huidverzorgingsproducten" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTevXkMT2rUKwYsrqP7GoGvhRObJ-LvNE2DjlgMpyXRlLZDQEk1PNPr9ZXbHoLb-63FB8iX7YT8UX_b_GFA0S7wWzxCmnULKv5D5QdVoINps29ZjSjfvFskTHLEKqtOfl6X20VyIVARMNifxRQeYhkWihdhj44RjbbfvrqnVliyfEiIVYKLkSjUi6uYlsoIRCENKkzPsaDT807yptG-q8o32pyTnSRKq9LmuiZkGekDuuxY8VUA9Q8v8TJCDwrttLqObVmu8vvV3w"/>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- Courtin -->
+        <article class="bg-surface-container-high rounded-2xl p-8 card-shadow flex flex-col transition-transform hover:-translate-y-2 duration-300">
+          <div class="flex-grow flex flex-col items-center text-center">
+            <div class="w-32 h-32 bg-secondary/10 rounded-full overflow-hidden relative mb-6">
+              <img class="absolute inset-0 w-full h-full object-cover" alt="Courtin tea tree producten" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOiycQiLc9aL2l-rizMMpqSQFq8JP2rlszYCmPWqOThs0PusbdyAUN6eWUMJqZCAWaL-d35mh9xWVXUE6O84xJacxv3kdPE1XDMp1C8jnABHSHUCLuHZoai8oK2DW0qm2A5U_x30HeVJfweNU8gi1blkgbdLYkRh1f2ZxUPt-4v1xJLsL9iZ9E8zg44V8A1KuAbEsUWO-stxmANEugkN0JWuDl0A2dftelBn1wKo3vBZGh82Bz9x25l9sKSeJ-wMgnEPeAqbTgv2E"/>
+            </div>
+            <h3 class="font-headline-sm text-headline-sm text-primary mb-3">Courtin</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant">
+              Natuurlijke huid- en voetverzorging op basis van pure tea tree olie.
+            </p>
+          </div>
+        </article>
+        <!-- LavieSage -->
+        <article class="bg-surface-variant rounded-2xl p-8 card-shadow flex flex-col transition-transform hover:-translate-y-2 duration-300">
+          <div class="flex-grow flex flex-col items-center text-center">
+            <div class="w-32 h-32 bg-tertiary/10 rounded-xl rotate-3 overflow-hidden relative mb-6">
+              <img class="absolute inset-0 w-full h-full object-cover -rotate-3" alt="LavieSage nutricosmetica" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDg2GcQWDjLXJ4mKBYIGBG4TcDVmjv-bRAxxX2GDwCqXX0jHq8ZyJdxpiOvdkesZxanDWJnQTuVvycPq55-gXdFy-xzLSmUzhi6hKbfc351r-fvSMScs3zIt0aBQhe8s8dwZNN2bU4xmDqMUNqcfx_GtJ2jTcARdWufJnqRwE9jEghkLB9NB4mntmUxvg1v-z-CFn1HGXUN6mPSJGz_DMciQ4r0txrxCDWwHbYTQaBPltORVEFZvv2rBdxE-47yjjMUb5c8pSsy-60"/>
+            </div>
+            <h3 class="font-headline-sm text-headline-sm text-primary mb-3">LavieSage</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant">
+              Natuurlijke voeding voor uw huid en huidverbetering van binnenuit.
+            </p>
+          </div>
+        </article>
+        <!-- Mycocure -->
+        <article class="bg-surface-container rounded-2xl p-8 card-shadow flex flex-col transition-transform hover:-translate-y-2 duration-300">
+          <div class="flex-grow flex flex-col items-center text-center">
+            <div class="w-32 h-32 bg-primary/10 product-shape-2 overflow-hidden relative mb-6">
+              <img class="absolute inset-0 w-full h-full object-cover" alt="Mycocure en ProntoMan voetverzorging" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxoMKdKV-j6qcAmhI-0aeH0OgQZXOPH-jMUC905JiOXaPKrPMwvFG6I_Hbc0Uu3gqznA-0LWXEIHdovQeKgFO5ihGpN5D58roWUGyOXYqLENRjU9OH3qwPXmcJPNoxXR7XT9mRPmxSBrg2mcOcEKlGNNvKRozB2d6SadklJo07UVLEuGSTfXbENDWFpRMUP4tht7gxx1_lLCgoF-qxSHgP1op5SILAeSOH8X7xUsEx_irCtWrppj4KkSD2HrxzoZQFxEmgPZWMKsU"/>
+            </div>
+            <h3 class="font-headline-sm text-headline-sm text-primary mb-3">Mycocure &amp; ProntoMan</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant">
+              Speciaal voor schimmelnagels en voetschimmel.
+            </p>
+          </div>
+        </article>
+        <!-- Golden Rose -->
+        <article class="bg-secondary-fixed rounded-2xl p-8 card-shadow flex flex-col transition-transform hover:-translate-y-2 duration-300">
+          <div class="flex-grow flex flex-col items-center text-center">
+            <div class="w-full h-40 bg-surface-container rounded-xl overflow-hidden relative mb-6">
+              <img class="absolute inset-0 w-full h-full object-cover" alt="Golden Rose make-up" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVJtrhJj4c1xUy7RXQs8PPjFJ4pB0QGvoPacSDsbG0DJcHPZP8DdSyA3wKbH9uQntA_rxYOuJyWufGBndrSaYdAgVfNwslv4_HMSMqeqqEdz_ZrBAGVpL2XNJsLj1PpGz43lr59b3CqwdH7tXDX2y9CwvPxd4uq3KZIcb5qzNz0uwh1YkHP1FbyDf_vOhAiBS99CGoZWAfupPzfOUcrJUpBvNq43T8AzaxpWw9nC2Gzyl-Ogwd53lkCeMv_JNyR2UY1vQH5jheUQg"/>
+            </div>
+            <h3 class="font-headline-sm text-headline-sm text-primary mb-3">Golden Rose Cosmetics</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant">
+              Schitterende en betaalbare make-up voor een stralende look.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BEHANDELINGEN / TREATMENTS ============ -->
+  <section id="treatments" class="bg-surface-container py-section-gap-mobile md:py-section-gap-desktop relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-surface-variant treatment-shape opacity-50 translate-x-1/3 -translate-y-1/3"></div>
+
+    <div class="max-w-container-max-width mx-auto px-gutter relative z-10">
+      <!-- Intro + Esther quote -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
+        <div class="relative rounded-[2rem] overflow-hidden soft-shadow aspect-[4/3]">
+          <img class="object-cover w-full h-full" alt="Natuurlijke huidverzorgingsproducten" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4ZoKzsT61Lb5MaA87ZFRPRNHt8pM04RN9gWiQ0ljmz7YlGVYyfXS6juHoPKYxfjKSiBbyIINBphHkvV-1YUljr_yDes2bZ5JQaWMTpN1xf5ygjzGz8eO_xkffkMgY2zmiQhhP2TZXcqEFIB_J1--1Ag5o2q_YIi-yW1xBbM4TpvKJq27rrtSPlwTspKUI0uMu9g4zUEH8iv64S9HFReL9_BpxbKmQUDioqpop5_FQc1IqOxFXXDDMpNDW4ZshSe2UiXQQfoZ5ihs"/>
+        </div>
+        <div class="space-y-8">
+          <h2 class="font-headline-md text-headline-md text-primary">Uitgebreid aanbod voor iedereen</h2>
+          <p class="text-on-surface-variant">
+            Mijn salon biedt een ruim aanbod aan behandelingen. Alles kan en niets moet, als u zich er maar goed…. en het liefst nog beter door gaat voelen! Of u nu jong, oud, man of vrouw bent... Er is voor ieder wat wils.
+          </p>
+          <ul class="space-y-4">
+            <li class="flex items-center text-primary"><span class="material-symbols-outlined mr-3 text-secondary">check_circle</span>Gezichtsbehandelingen &amp; Huidverbetering</li>
+            <li class="flex items-center text-primary"><span class="material-symbols-outlined mr-3 text-secondary">check_circle</span>Microdermabrasie &amp; Dermashaper</li>
+            <li class="flex items-center text-primary"><span class="material-symbols-outlined mr-3 text-secondary">check_circle</span>Pedicure &amp; Voetverzorging</li>
+            <li class="flex items-center text-primary"><span class="material-symbols-outlined mr-3 text-secondary">check_circle</span>Massages &amp; Harsen</li>
+          </ul>
+          <p class="font-headline-sm text-headline-sm text-primary italic">
+            "Ik heet u van harte welkom op mijn site en in mijn praktijk! Graag tot ziens."
+            <span class="text-lg font-normal text-secondary block mt-2">— Esther van Zon</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Categories -->
+      <div class="space-y-16">
+        <!-- Category 1: Reinigend -->
+        <div>
+          <div class="flex items-center gap-4 mb-8">
+            <span class="material-symbols-outlined text-primary text-3xl">spa</span>
+            <h3 class="font-headline-md text-headline-md text-primary">Reinigende en verzorgende behandelingen</h3>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div class="bg-surface rounded-xl p-8 soft-shadow transition-transform hover:-translate-y-1 duration-300">
+              <div class="flex justify-between items-start gap-4">
+                <h4 class="font-headline-sm text-headline-sm text-secondary">Dieptereinigingsbehandeling incl. epileren</h4>
+                <span class="font-headline-sm text-headline-sm text-primary whitespace-nowrap">€ 55,00</span>
+              </div>
+            </div>
+            <div class="bg-surface rounded-xl p-8 soft-shadow transition-transform hover:-translate-y-1 duration-300">
+              <div class="flex justify-between items-start gap-4">
+                <h4 class="font-headline-sm text-headline-sm text-secondary">Dieptereinigingsbehandeling excl. epileren</h4>
+                <span class="font-headline-sm text-headline-sm text-primary whitespace-nowrap">€ 50,00</span>
+              </div>
+            </div>
+            <div class="bg-surface rounded-xl p-8 soft-shadow transition-transform hover:-translate-y-1 duration-300 lg:col-span-2">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="flex justify-between items-start gap-4">
+                  <h4 class="font-headline-sm text-headline-sm text-secondary">Basis gezichtsbehandeling</h4>
+                  <span class="font-headline-sm text-headline-sm text-primary whitespace-nowrap">€ 65,00</span>
+                </div>
+                <div class="flex justify-between items-start gap-4 border-t md:border-t-0 md:border-l border-outline-variant pt-6 md:pt-0 md:pl-8">
+                  <h4 class="font-headline-sm text-headline-sm text-secondary">Behandeling De Luxe</h4>
+                  <span class="font-headline-sm text-headline-sm text-primary whitespace-nowrap">€ 72,00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-12">
+            <h4 class="font-label-caps text-label-caps text-tertiary uppercase mb-6 tracking-widest">Voor hem</h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div class="glass-panel rounded-xl p-6 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-24 h-24 bg-primary-container opacity-10 rounded-bl-full"></div>
+                <div class="flex justify-between items-start gap-4">
+                  <h5 class="font-body-lg text-body-lg font-medium text-secondary">Basis gezichtsbehandeling</h5>
+                  <span class="font-body-lg text-body-lg text-primary whitespace-nowrap">€ 65,00</span>
+                </div>
+              </div>
+              <div class="glass-panel rounded-xl p-6 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-24 h-24 bg-primary-container opacity-10 rounded-bl-full"></div>
+                <div class="flex justify-between items-start gap-4">
+                  <h5 class="font-body-lg text-body-lg font-medium text-secondary">"Anti-aging" behandeling</h5>
+                  <span class="font-body-lg text-body-lg text-primary whitespace-nowrap">€ 74,00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="w-full flex justify-center">
+          <svg class="w-24 h-6 text-outline-variant" fill="none" viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 10 Q 25 20, 50 10 T 100 10" fill="none" stroke="currentColor" stroke-width="1"></path>
+          </svg>
+        </div>
+
+        <!-- Category 2: Anti-Aging -->
+        <div>
+          <div class="flex items-center gap-4 mb-8">
+            <span class="material-symbols-outlined text-primary text-3xl">auto_awesome</span>
+            <h3 class="font-headline-md text-headline-md text-primary">Huidverbeterende &amp; Anti-Aging</h3>
+          </div>
+          <div class="bg-surface-container-high rounded-xl p-8 lg:p-12 soft-shadow flex flex-col md:flex-row justify-between items-center gap-8 relative overflow-hidden">
+            <div class="absolute -right-16 -top-16 text-primary-fixed-dim opacity-30 pointer-events-none">
+              <span class="material-symbols-outlined text-9xl">wb_sunny</span>
+            </div>
+            <div class="flex-1 z-10">
+              <h4 class="font-headline-sm text-headline-sm text-secondary mb-2">Intensive "Anti-Aging" behandeling</h4>
+              <p class="font-body-md text-body-md text-on-surface-variant max-w-lg">Een krachtige behandeling gericht op celvernieuwing en het verminderen van fijne lijntjes voor een stralende, jeugdige huid.</p>
+            </div>
+            <div class="text-right z-10 bg-surface px-8 py-6 rounded-lg shadow-sm">
+              <div class="font-label-caps text-label-caps text-tertiary mb-1">PRIJS</div>
+              <div class="font-display-lg-mobile text-display-lg-mobile text-primary">€ 77,00</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3: Wellness -->
+        <div>
+          <div class="flex items-center gap-4 mb-8">
+            <span class="material-symbols-outlined text-primary text-3xl">self_improvement</span>
+            <h3 class="font-headline-md text-headline-md text-primary">Wellness behandelingen &amp; massages</h3>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="border border-outline-variant rounded-xl p-6 hover:border-primary transition-colors bg-surface">
+              <div class="flex justify-between items-start gap-4">
+                <div>
+                  <h4 class="font-headline-sm text-headline-sm text-secondary">Anti-stress behandeling</h4>
+                  <span class="inline-block mt-1 px-3 py-1 bg-surface-container rounded-full font-label-caps text-label-caps text-tertiary">90 MIN</span>
+                </div>
+                <span class="font-headline-sm text-headline-sm text-primary whitespace-nowrap">€ 75,00</span>
+              </div>
+            </div>
+            <div class="border border-outline-variant rounded-xl p-6 hover:border-primary transition-colors bg-surface">
+              <div class="flex justify-between items-start gap-4">
+                <div>
+                  <h4 class="font-headline-sm text-headline-sm text-secondary">Rug-, schouder- en nekmassage</h4>
+                  <span class="inline-block mt-1 px-3 py-1 bg-surface-container rounded-full font-label-caps text-label-caps text-tertiary">25 MIN</span>
+                </div>
+                <span class="font-headline-sm text-headline-sm text-primary whitespace-nowrap">€ 35,00</span>
+              </div>
+            </div>
+            <div class="border border-outline-variant rounded-xl p-6 hover:border-primary transition-colors bg-surface">
+              <div class="flex justify-between items-start gap-4">
+                <div>
+                  <h4 class="font-headline-sm text-headline-sm text-secondary">Totale lichaamsmassage</h4>
+                  <span class="inline-block mt-1 px-3 py-1 bg-surface-container rounded-full font-label-caps text-label-caps text-tertiary">55 MIN</span>
+                </div>
+                <span class="font-headline-sm text-headline-sm text-primary whitespace-nowrap">€ 52,00</span>
+              </div>
+            </div>
+            <div class="border border-outline-variant rounded-xl p-6 hover:border-primary transition-colors bg-surface">
+              <div class="flex justify-between items-start gap-4">
+                <div>
+                  <h4 class="font-headline-sm text-headline-sm text-secondary">Anti-Stress massage</h4>
+                  <span class="inline-block mt-1 px-3 py-1 bg-surface-container rounded-full font-label-caps text-label-caps text-tertiary">85 MIN</span>
+                </div>
+                <span class="font-headline-sm text-headline-sm text-primary whitespace-nowrap">€ 75,00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NIEUWS / NEWS ============ -->
+  <section id="news" class="bg-surface py-section-gap-mobile md:py-section-gap-desktop">
+    <div class="px-gutter max-w-container-max-width mx-auto">
+      <div class="text-center mb-16 max-w-2xl mx-auto">
+        <h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6">Nieuws &amp; aanbiedingen</h2>
+        <p class="font-body-lg text-body-lg text-on-surface-variant">
+          Blijf op de hoogte van de laatste ontwikkelingen, nieuwe behandelingen en speciale aanbiedingen in onze salon.
+        </p>
+      </div>
+
+      <!-- Featured article -->
+      <article class="bg-surface-container rounded-[2rem] overflow-hidden flex flex-col md:flex-row soft-shadow mb-20">
+        <div class="w-full md:w-1/2 min-h-[300px] md:min-h-[400px] relative">
+          <img class="absolute inset-0 w-full h-full object-cover" alt="Vernieuwde salon interieur" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdsJ7VK59e70tO5LnwIgJ1Toj69rCIsPfqa6PyBzmrr-UjLhPqteZAg0R-hIzt1mYa5bnRO8gByn9FTIyvgrjjkccQAb2KJQfp3ALzZ10glQvTvKdcpMivo-XibtVh73quCe621tVpZyZ6gs3NYUdXcZGremidy-26VjLL67EIPm7mA11AZzNC_JqIj_g5zuBZ4vtufE18l4HW74EA8XPaj6Y27xy_jADKKxx-PSr68ocs6WFywjmeD4EGgs2lwolgfsK2P-804JE"/>
+        </div>
+        <div class="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+          <div class="mb-4">
+            <span class="inline-block bg-tertiary/10 text-tertiary px-4 py-1 rounded-full font-label-caps text-label-caps uppercase tracking-wider">Update</span>
+            <time class="ml-4 text-on-surface-variant font-body-md text-body-md">9 januari 2024</time>
+          </div>
+          <h3 class="font-headline-md text-headline-md text-primary mb-6">Onze salon is vernieuwd!!!</h3>
+          <p class="font-body-lg text-body-lg text-on-surface-variant">
+            Na weken van voorbereiding en hard werken is het eindelijk zover: onze salon is volledig vernieuwd! We hebben een nog rustgevendere omgeving gecreëerd waar u optimaal kunt ontspannen tijdens uw behandelingen. Kom snel langs om de vernieuwde sfeer zelf te ervaren.
+          </p>
+        </div>
+      </article>
+
+      <!-- Newsletter -->
+      <div class="bg-secondary/5 rounded-[2rem] py-section-gap-mobile relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-primary/10 news-shape-1 -translate-y-1/2 translate-x-1/4 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-tertiary/10 news-shape-2 translate-y-1/3 -translate-x-1/4 blur-3xl"></div>
+        <div class="px-gutter max-w-2xl mx-auto text-center relative z-10">
+          <span class="material-symbols-outlined text-4xl text-primary mb-4 opacity-50">mail</span>
+          <h3 class="font-headline-sm text-headline-sm text-primary mb-4">Niets missen?</h3>
+          <p class="font-body-md text-body-md text-on-surface-variant mb-8">
+            Schrijf u in voor onze nieuwsbrief en ontvang als eerste updates over nieuwe behandelingen en exclusieve aanbiedingen.
+          </p>
+          <form id="newsletter-form" class="flex flex-col sm:flex-row gap-4 justify-center">
+            <input class="bg-transparent border-b border-secondary text-on-surface focus:border-primary focus:ring-0 px-4 py-2 font-body-md min-w-[250px] placeholder-on-surface-variant/50 transition-colors" placeholder="Uw e-mailadres" type="email" required/>
+            <button class="bg-primary text-on-primary px-6 py-2 rounded-full hover:bg-surface-tint transition-colors font-body-md" type="submit">
+              Inschrijven
+            </button>
+          </form>
+          <p id="newsletter-msg" class="hidden mt-4 text-primary font-body-md">Bedankt voor uw inschrijving!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="bg-surface-container py-section-gap-mobile md:py-section-gap-desktop">
+    <div class="max-w-container-max-width mx-auto px-gutter">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6">Contact &amp; route</h2>
+        <p class="font-body-lg text-body-lg text-secondary">
+          Heeft u een vraag of een opmerking voor ons? Vul dan onderstaand formulier in en wij nemen zo spoedig mogelijk een gepaste actie.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <!-- Contact details -->
+        <div class="lg:col-span-5 flex flex-col gap-8">
+          <div class="bg-surface rounded-xl p-10 soft-shadow relative overflow-hidden group">
+            <div class="absolute -right-10 -top-10 w-40 h-40 bg-surface-variant opacity-50 contact-shape group-hover:rotate-12 transition-transform duration-700"></div>
+            <h3 class="font-headline-md text-headline-md text-primary mb-8 relative z-10">Bereikbaarheid</h3>
+            <div class="space-y-6 relative z-10">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined text-secondary">location_on</span>
+                </div>
+                <div>
+                  <p class="font-label-caps text-label-caps text-secondary uppercase mb-1">Adres</p>
+                  <p class="font-body-lg text-body-lg text-on-surface">Fresiapad 13<br/>5551 AL Valkenswaard</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined text-secondary">call</span>
+                </div>
+                <div>
+                  <p class="font-label-caps text-label-caps text-secondary uppercase mb-1">Telefoon</p>
+                  <a class="font-body-lg text-body-lg text-on-surface hover:text-primary transition-colors" href="tel:0402047622">040-2047622</a>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined text-secondary">mail</span>
+                </div>
+                <div>
+                  <p class="font-label-caps text-label-caps text-secondary uppercase mb-1">E-mail</p>
+                  <a class="font-body-lg text-body-lg text-on-surface hover:text-primary transition-colors" href="mailto:info@esthervanzon.nl">info@esthervanzon.nl</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Map -->
+          <div class="bg-surface rounded-xl overflow-hidden soft-shadow h-64">
+            <iframe
+              title="Kaart Fresiapad 13, Valkenswaard"
+              class="w-full h-full border-0"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=Fresiapad+13,+5551+AL+Valkenswaard&output=embed">
+            </iframe>
+          </div>
+        </div>
+
+        <!-- Contact form -->
+        <div class="lg:col-span-7 bg-surface rounded-xl p-10 md:p-14 soft-shadow">
+          <h3 class="font-headline-md text-headline-md text-primary mb-8">Contactformulier</h3>
+          <form id="contact-form" class="space-y-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div class="relative">
+                <input class="input-underline w-full font-body-lg text-body-lg text-on-surface focus:ring-0 peer" id="naam" name="naam" placeholder=" " required type="text"/>
+                <label class="absolute left-0 -top-3.5 text-secondary text-sm font-body-md transition-all peer-placeholder-shown:text-body-lg peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-sm peer-focus:text-primary" for="naam">Naam</label>
+              </div>
+              <div class="relative">
+                <input class="input-underline w-full font-body-lg text-body-lg text-on-surface focus:ring-0 peer" id="telefoon" name="telefoon" pattern="[0-9]{10}" placeholder=" " required type="tel"/>
+                <label class="absolute left-0 -top-3.5 text-secondary text-sm font-body-md transition-all peer-placeholder-shown:text-body-lg peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-sm peer-focus:text-primary" for="telefoon">Telefoonnummer (10 getallen)</label>
+              </div>
+            </div>
+            <div class="relative">
+              <input class="input-underline w-full font-body-lg text-body-lg text-on-surface focus:ring-0 peer" id="email" name="email" placeholder=" " required type="email"/>
+              <label class="absolute left-0 -top-3.5 text-secondary text-sm font-body-md transition-all peer-placeholder-shown:text-body-lg peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-sm peer-focus:text-primary" for="email">E-mailadres</label>
+            </div>
+            <div class="relative pt-4">
+              <textarea class="input-underline w-full font-body-lg text-body-lg text-on-surface focus:ring-0 peer resize-none" id="bericht" name="bericht" placeholder=" " required rows="4"></textarea>
+              <label class="absolute left-0 top-0 text-secondary text-sm font-body-md transition-all peer-placeholder-shown:text-body-lg peer-placeholder-shown:top-6 peer-focus:top-0 peer-focus:text-sm peer-focus:text-primary" for="bericht">Bericht</label>
+            </div>
+            <div class="flex items-start gap-3 mt-8">
+              <div class="flex items-center h-6">
+                <input class="w-5 h-5 rounded border-secondary text-primary focus:ring-primary bg-surface" id="privacy" name="privacy" required type="checkbox"/>
+              </div>
+              <label class="font-body-md text-body-md text-secondary" for="privacy">
+                Hierbij verklaar ik akkoord te gaan met het verwerken van mijn persoonsgegevens conform de <a class="underline hover:text-primary" href="#">Privacy verklaring</a>.
+              </label>
+            </div>
+            <div class="pt-4">
+              <button class="w-full md:w-auto px-8 py-4 bg-primary text-on-primary rounded-full font-body-lg text-body-lg hover:bg-surface-tint transition-colors flex items-center justify-center gap-2 group" type="submit">
+                Verzenden
+                <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+              </button>
+            </div>
+            <p id="contact-msg" class="hidden text-primary font-body-md">Bedankt voor uw bericht! Wij nemen zo spoedig mogelijk contact met u op.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="w-full pt-section-gap-desktop pb-12 bg-surface-container-high">
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-gutter max-w-container-max-width mx-auto">
+    <div class="md:col-span-2 space-y-4">
+      <div class="font-headline-sm text-headline-sm text-primary">ESTHER VAN ZON</div>
+      <p class="text-secondary font-body-md text-body-md max-w-sm">
+        © 2024 Schoonheidssalon Esther van Zon. Een oase van rust in Dommelen.
+      </p>
+      <p class="text-secondary font-body-md text-body-md">U kunt bij ons pinnen.</p>
+    </div>
+    <div class="space-y-4">
+      <h4 class="text-primary font-bold font-body-md uppercase tracking-wider text-sm">Navigatie</h4>
+      <ul class="space-y-2">
+        <li><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#salon">Salon</a></li>
+        <li><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#about">Over Esther</a></li>
+        <li><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#treatments">Behandelingen</a></li>
+        <li><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#products">Producten</a></li>
+      </ul>
+    </div>
+    <div class="space-y-4">
+      <h4 class="text-primary font-bold font-body-md uppercase tracking-wider text-sm">Contact</h4>
+      <address class="text-on-surface-variant font-body-md text-body-md not-italic space-y-1">
+        Fresiapad 13<br/>
+        5551 AL Valkenswaard<br/>
+        <a class="hover:text-primary transition-colors" href="tel:0402047622">040-2047622</a><br/>
+        <a class="hover:text-primary transition-colors" href="mailto:info@esthervanzon.nl">info@esthervanzon.nl</a>
+      </address>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ---- Mobile menu toggle ----
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuToggle.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('hidden') === false;
+    mobileMenu.classList.toggle('flex', isOpen);
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+    menuToggle.querySelector('.material-symbols-outlined').textContent = isOpen ? 'close' : 'menu';
+  });
+  // Close mobile menu after clicking a link
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      mobileMenu.classList.remove('flex');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.querySelector('.material-symbols-outlined').textContent = 'menu';
+    });
+  });
+
+  // ---- Active section highlighting ----
+  const navLinks = document.querySelectorAll('.nav-link');
+  const sections = document.querySelectorAll('main section[id]');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute('id');
+        navLinks.forEach(link => {
+          link.classList.toggle('is-active', link.getAttribute('href') === '#' + id);
+        });
+      }
+    });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  sections.forEach(section => observer.observe(section));
+
+  // ---- Contact form (demo handler) ----
+  const contactForm = document.getElementById('contact-form');
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (!contactForm.checkValidity()) { contactForm.reportValidity(); return; }
+    document.getElementById('contact-msg').classList.remove('hidden');
+    contactForm.reset();
+  });
+
+  // ---- Newsletter form (demo handler) ----
+  const newsletterForm = document.getElementById('newsletter-form');
+  newsletterForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (!newsletterForm.checkValidity()) { newsletterForm.reportValidity(); return; }
+    document.getElementById('newsletter-msg').classList.remove('hidden');
+    newsletterForm.reset();
+  });
+</script>
+</body>
+</html>
