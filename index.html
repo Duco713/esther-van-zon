@@ -231,32 +231,26 @@
 <main>
 
   <!-- ============ HERO / HOME ============ -->
-  <section id="home" class="relative min-h-screen flex items-center justify-center pt-28 pb-16 bg-surface-container-low overflow-hidden">
-    <!-- Decorative organic background elements -->
-    <div class="absolute top-1/4 -right-20 w-96 h-96 bg-secondary-fixed opacity-40 organic-shape-morph blur-3xl"></div>
-    <div class="absolute -bottom-20 -left-20 w-[30rem] h-[30rem] bg-primary-fixed opacity-30 organic-shape-morph blur-3xl"></div>
+  <section id="home" class="relative min-h-screen flex items-center justify-center text-center px-gutter overflow-hidden">
+    <!-- Full-bleed background image -->
+    <div class="absolute inset-0 z-0">
+      <img class="w-full h-full object-cover opacity-30" alt="Serene tuin gezien door het raam van de behandelruimte" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDq7fZ5bN88EDW_NljNofeTRzPR7Qs6Ir1Zp5NDkdNKJvpyeD0Drp19FwrdpqQdgCXwtgZMNy3kXUUOc2k5c3S9lMMHU2ZTsrjMhO8tnkwJ4e-jaoZwwE3pYORTN5tZoOph88nKsCghnnKH_OhUZwQkaYcM4LahJo4NKYDkhwTj8uDCkG0Z3HNVY1JwC_p8b_rha8-vlT6Xd_HdD3qjRRAj1nROpvhMkaHYOoxOhAd8lrq4y_7AHQqKklkDGwvpm0PWnxjzOfzbIXE"/>
+      <div class="absolute inset-0 bg-gradient-to-b from-surface/50 to-background"></div>
+    </div>
 
-    <div class="max-w-container-max-width mx-auto px-gutter grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
-      <div class="space-y-8 max-w-2xl">
-        <span class="font-label-caps text-label-caps text-primary tracking-widest uppercase">Welkom in de salon</span>
-        <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary leading-tight">
-          Ziet u er goed uit omdat u zich goed voelt… of voelt u zich goed omdat u er goed uit ziet?
-        </h1>
-        <p class="text-on-surface-variant text-lg">
-          Iedereen heeft een huid. Om deze mooi en in een goede conditie te brengen en vooral ook te houden is een goede huidverzorging essentieel. Ontdek de balans tussen innerlijke rust en uiterlijke verzorging.
-        </p>
-        <div class="pt-4 flex flex-col sm:flex-row gap-4">
-          <a class="inline-flex items-center justify-center px-8 py-4 bg-primary text-on-primary rounded-full hover:bg-primary/90 transition-all duration-300 soft-shadow" href="#treatments">
-            Ontdek Behandelingen
-          </a>
-          <a class="inline-flex items-center justify-center px-8 py-4 border border-outline text-primary rounded-full hover:bg-surface-variant transition-all duration-300" href="#contact">
-            Neem Contact Op
-          </a>
-        </div>
-      </div>
-
-      <div class="relative w-full aspect-[4/5] md:aspect-square rounded-[2rem] overflow-hidden soft-shadow">
-        <img class="object-cover w-full h-full transform hover:scale-105 transition-transform duration-700 ease-out" alt="Serene spa-omgeving met behandelbed en natuurlijk licht" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALbx5bB50jmUG71suv-ImBy1icTikYrrGJQZccDmwUYBjK1tsH0OHAjHTmDxuktVB_JmbCOn1qe4XkDrNnx0wSNFvvicj0SGB-ZFCccbzJK3k7OC_-KqNk-mTviz-jwJ63soahr0mYAfnLGlcntVx3gKdFybpnxfXiIvZ9rMi8VvkiXCfBThLHV02MgR1JcAuid_1KX81rlZYfBvoRecekOgpEt-GWf4hERFPZNVL0KMZhVqjQmX1IXn0G5wwoF08efveFeMOIdhg"/>
+    <div class="relative z-10 max-w-3xl mx-auto pt-24">
+      <span class="font-label-caps text-label-caps text-primary tracking-widest uppercase">Welkom in de salon</span>
+      <h1 class="font-display-lg text-display-lg text-primary mb-6 mt-4">Een oase van rust in Dommelen</h1>
+      <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-2xl mx-auto">
+        Al ruim 26 jaar is schoonheidssalon Esther van Zon een begrip. Een heerlijke ruimte om even te ontspannen en bij te komen.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a class="inline-flex items-center justify-center px-8 py-4 bg-primary text-on-primary rounded-full hover:bg-primary/90 transition-colors soft-shadow" href="#salon">
+          Ontdek de salon
+        </a>
+        <a class="inline-flex items-center justify-center px-8 py-4 border border-outline text-primary rounded-full hover:bg-surface-variant transition-colors" href="#contact">
+          Neem Contact Op
+        </a>
       </div>
     </div>
   </section>
