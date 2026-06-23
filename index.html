@@ -120,7 +120,7 @@
   }
 
   /* Offset for the fixed navbar when jumping to a section */
-  section[id] { scroll-margin-top: 96px; }
+  section[id] { scroll-margin-top: 120px; }
 
   /* ---- Hero (Home) animated blobs ---- */
   .organic-shape-morph {
@@ -188,7 +188,7 @@
 <header class="fixed top-0 w-full z-50 glass-nav shadow-sm transition-all duration-300">
   <div class="flex justify-between items-center px-gutter py-4 max-w-container-max-width mx-auto">
     <a class="flex items-center hover:opacity-80 transition-opacity" href="#home">
-      <img src="images/logo.jpg" alt="Esther van Zon — Beauty · Care · Relax" class="h-12 md:h-14 w-auto"/>
+      <img src="images/logo.png" alt="Esther van Zon — Beauty · Care · Relax" class="h-16 md:h-20 w-auto"/>
     </a>
 
     <!-- Desktop Navigation -->
@@ -234,15 +234,15 @@
   <section id="home" class="relative min-h-screen flex items-center justify-center text-center px-gutter overflow-hidden">
     <!-- Full-bleed background image -->
     <div class="absolute inset-0 z-0">
-      <img class="w-full h-full object-cover opacity-30" alt="Serene tuin gezien door het raam van de behandelruimte" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDq7fZ5bN88EDW_NljNofeTRzPR7Qs6Ir1Zp5NDkdNKJvpyeD0Drp19FwrdpqQdgCXwtgZMNy3kXUUOc2k5c3S9lMMHU2ZTsrjMhO8tnkwJ4e-jaoZwwE3pYORTN5tZoOph88nKsCghnnKH_OhUZwQkaYcM4LahJo4NKYDkhwTj8uDCkG0Z3HNVY1JwC_p8b_rha8-vlT6Xd_HdD3qjRRAj1nROpvhMkaHYOoxOhAd8lrq4y_7AHQqKklkDGwvpm0PWnxjzOfzbIXE"/>
-      <div class="absolute inset-0 bg-gradient-to-b from-surface/50 to-background"></div>
+      <img class="w-full h-full object-cover opacity-45 blur-[5px] scale-105" alt="De sfeervolle behandelruimte van de salon" src="images/Salon%20hero.jpg"/>
+      <div class="absolute inset-0 bg-gradient-to-b from-surface/70 via-surface/50 to-background"></div>
     </div>
 
     <div class="relative z-10 max-w-3xl mx-auto pt-24">
       <span class="font-label-caps text-label-caps text-primary tracking-widest uppercase">Welkom in de salon</span>
       <h1 class="font-display-lg text-display-lg text-primary mb-6 mt-4">Een oase van rust in Dommelen</h1>
       <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-2xl mx-auto">
-        Al ruim 26 jaar is schoonheidssalon Esther van Zon een begrip. Een heerlijke ruimte om even te ontspannen en bij te komen.
+        Al ruim 26 jaar is schoonheidssalon Esther van Zon een begrip in Dommelen en omstreken. Een heerlijke ruimte om even te ontspannen en bij te komen.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a class="inline-flex items-center justify-center px-8 py-4 bg-primary text-on-primary rounded-full hover:bg-primary/90 transition-colors soft-shadow" href="#salon">
@@ -306,7 +306,7 @@
 
   <!-- Wavy divider -> surface -->
   <div class="w-full relative -mt-1 z-20 bg-surface-container">
-    <svg class="w-full h-auto text-surface fill-current block transform rotate-180" preserveAspectRatio="none" viewBox="0 0 1440 120">
+    <svg class="w-full h-auto text-surface fill-current block" preserveAspectRatio="none" viewBox="0 0 1440 120">
       <path d="M0,0 C320,120 420,120 720,60 C1020,0 1120,0 1440,60 L1440,120 L0,120 Z"></path>
     </svg>
   </div>
@@ -316,7 +316,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
       <div class="order-2 md:order-1 relative">
         <div class="salon-shape-1 overflow-hidden relative z-10 w-full aspect-square soft-shadow">
-          <img class="w-full h-full object-cover" alt="Lichte behandelruimte met uitzicht op de tuin" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLtwVBPyq5S43p0IpeZau-ewRrivENXiTDpwxCRK5-yVnGNnFd07SiMGRspPrGW9Fuz0c-_x_WdJYgEf_htuVLEvVQaDr2jSDUmOpSNnxRZy5We0VwekC3dGT2vH4Okl9E2r-mQLfXmK9SkWhuVBbkIeh6hU79Bdq-URkBbvpK7JjVbLxTqQLLCT83VbRf3RHl8IovsHq68ro8x7vMBrgEMeOIjThhHW2KBYd76_l8OoAK_nrv01_ylIfVtZ8p69qHv8SU5m_TH-w"/>
+          <img class="w-full h-full object-cover" alt="De lichte behandelruimte met raam en planten" src="images/salon.jpg"/>
         </div>
         <div class="absolute -bottom-8 -left-8 w-32 h-32 rounded-full bg-secondary-fixed/50 z-0 blur-2xl"></div>
       </div>
@@ -324,7 +324,7 @@
         <span class="font-label-caps text-label-caps text-secondary tracking-widest uppercase">De Salon</span>
         <h2 class="font-headline-md text-headline-md text-primary mb-6 mt-2">De Locatie</h2>
         <p class="font-body-md text-body-md text-on-surface-variant mb-6">
-          Sinds 15 jaar is de salon gevestigd op de huidige locatie, Fresiapad 13 in oud-Dommelen. De salon bevindt zich aan de zijkant van het woonhuis met een aparte entree, wachtkamer, en een mooie lichte behandelruimte met uitzicht op de tuin.
+          Sinds 15 jaar is de salon gevestigd op de huidige locatie, Fresiapad 13 in oud-Dommelen. De salon bevindt zich aan de zijkant van het woonhuis met een aparte entree, wachtkamer, balie-/verkoopruimte en een mooie lichte behandelruimte met uitzicht op de tuin.
         </p>
         <p class="font-body-md text-body-md text-on-surface-variant mb-8">
           De salon straalt rust en warmte uit. Een heerlijke ruimte om even te ontspannen en bij te komen, weg van de dagelijkse drukte.
@@ -354,12 +354,12 @@
             Passie voor Huidverbetering
           </h2>
           <p class="text-on-surface-variant font-body-lg text-body-lg">
-            Al ruim 26 jaar is schoonheidssalon Esther van Zon een begrip in Dommelen en omstreken. Wat begon in een tuinstoel op mijn slaapkamer is uitgegroeid tot een professionele oase van rust.
+            Mijn naam is Esther en huidverbetering is mijn grote passie. In mijn salon draait alles om persoonlijke aandacht. Ik neem de tijd voor u en uw huid en geef altijd eerlijk en vrijblijvend advies. U bent van harte welkom om even helemaal tot rust te komen.
           </p>
         </div>
         <div class="order-1 md:order-2 flex justify-center relative isolate">
           <div class="absolute inset-0 bg-secondary-fixed/40 about-shape-1 scale-110 -z-10"></div>
-          <img alt="Esther van Zon" class="relative w-full max-w-md aspect-[4/5] object-cover about-shape-2 shadow-sm" src="images/Esther.jpg"/>
+          <img alt="Esther van Zon" class="relative w-full max-w-md aspect-[2/3] object-cover about-shape-2 shadow-sm" src="images/Esther.jpg"/>
         </div>
       </div>
 
@@ -375,20 +375,20 @@
           </div>
           <h4 class="font-headline-sm text-headline-sm text-primary mb-3">Opleiding &amp; Ervaring</h4>
           <p class="text-on-surface-variant text-body-md font-body-md">
-            Mijn basis ligt bij de opleiding uiterlijke verzorging &amp; pedicure aan het MDGO. Daarna volgde de praktijk PLUS opleiding aan het Thomas College, en diverse specialisaties waaronder dermatologie en diabetische voet. Direct na mijn opleiding deed ik waardevolle ervaring op bij diverse grote sauna's in de regio.
+            Mijn basis ligt bij de opleiding uiterlijke verzorging &amp; pedicure aan het MDGO (Kempenpoort College). Sindsdien heb ik nooit stilgezeten en volgde onder andere de praktijk PLUS-opleiding aan het Thomas College, massage- en verkooptrainingen en cursussen dermatologie, diabetische voet en schimmeldiagnostiek. Nog steeds volg ik regelmatig trainingen en bezoek ik vakbeurzen om up-to-date te blijven. Ook deed ik direct na mijn opleiding waardevolle ervaring op bij diverse grote sauna's in de regio.
           </p>
         </div>
-        <div class="bg-primary text-on-primary rounded-2xl p-8 soft-shadow flex flex-col items-start justify-center">
-          <h4 class="font-display-lg text-display-lg mb-2">26+</h4>
+        <div class="bg-primary text-on-primary rounded-2xl p-8 soft-shadow flex flex-col items-center justify-center text-center">
+          <h4 class="font-display-lg text-7xl md:text-8xl leading-none mb-3">26+</h4>
           <p class="font-label-caps text-label-caps tracking-widest opacity-80 uppercase">Jaar Ervaring</p>
         </div>
         <div class="bg-surface rounded-2xl p-8 soft-shadow flex flex-col items-start">
           <div class="bg-secondary-fixed text-on-secondary-fixed w-12 h-12 rounded-full flex items-center justify-center mb-6">
-            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">spa</span>
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">handshake</span>
           </div>
-          <h4 class="font-headline-sm text-headline-sm text-primary mb-3">De Salon</h4>
+          <h4 class="font-headline-sm text-headline-sm text-primary mb-3">Kennis van uw huid</h4>
           <p class="text-on-surface-variant text-body-md font-body-md">
-            Sinds 15 jaar gevestigd op de huidige locatie, Fresiapad 13. Een lichte, rustgevende ruimte met uitzicht op de tuin, voorzien van een aparte entree en wachtkamer.
+            Omdat ik dagelijks intensief met de huid werk, ken ik de behoefte van uw huid goed. Zo geef ik altijd een passend en vrijblijvend advies over de juiste verzorging, helemaal afgestemd op wat ú nodig heeft.
           </p>
         </div>
         <div class="bg-surface rounded-2xl p-8 soft-shadow flex flex-col items-start md:col-span-2">
@@ -397,7 +397,7 @@
           </div>
           <h4 class="font-headline-sm text-headline-sm text-primary mb-3">Natuurlijke Producten</h4>
           <p class="text-on-surface-variant text-body-md font-body-md">
-            Ik werk met het 'natuurlijke' merk Dr. Spiller, inclusief de biologische "alpenrauschlijn" op basis van alpenkruiden. Uitgebreid getraind om u het beste, vrijblijvende advies te geven voor thuisgebruik.
+            Ik werk met het 'natuurlijke' merk Dr. Spiller, met de unieke biologische "alpenrauschlijn" op basis van alpenkruiden. Via leverancier Florint ben ik uitgebreid opgeleid om u het beste, vrijblijvende advies te geven. (Bijna) alles uit de salon is ook voor thuisgebruik verkrijgbaar, voor iedere portemonnee. Regelmatig zijn er leuke acties op producten én behandelingen; via de <a class="underline hover:text-primary" href="#news">nieuwsbrief</a> blijft u op de hoogte.
           </p>
         </div>
       </div>
