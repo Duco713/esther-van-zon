@@ -164,6 +164,9 @@
     border: 1px solid rgba(113, 90, 72, 0.1);
   }
 
+  /* Behandelingen: lange woorden netjes afbreken op smalle schermen */
+  #treatments h4, #treatments h5 { overflow-wrap: anywhere; hyphens: auto; }
+
   /* ---- News ---- */
   .news-shape-1 { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
   .news-shape-2 { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
@@ -360,7 +363,7 @@
     <div class="max-w-container-max-width mx-auto">
       <!-- Intro -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
-        <div class="order-2 md:order-1 space-y-6">
+        <div class="space-y-6">
           <p class="font-label-caps text-label-caps text-secondary tracking-widest uppercase">Over Esther</p>
           <h2 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-primary">
             Passie voor Huidverbetering
@@ -369,7 +372,7 @@
             Mijn naam is Esther en huidverbetering is mijn grote passie. In mijn salon draait alles om persoonlijke aandacht. Ik neem de tijd voor u en uw huid en geef altijd eerlijk en vrijblijvend advies. U bent van harte welkom om even helemaal tot rust te komen.
           </p>
         </div>
-        <div class="order-1 md:order-2 flex justify-center relative isolate">
+        <div class="flex justify-center relative isolate">
           <div class="absolute inset-0 bg-secondary-fixed/40 about-shape-1 scale-110 -z-10"></div>
           <img alt="Esther van Zon" class="relative w-full max-w-md aspect-[2/3] object-cover about-shape-2 shadow-sm" src="images/Esther.jpg"/>
         </div>
@@ -562,7 +565,7 @@
             <h3 class="font-headline-md text-headline-md text-primary">Reinigende en verzorgende behandelingen</h3>
           </div>
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-            <article class="bg-surface rounded-xl p-8 soft-shadow transition-transform hover:-translate-y-1 duration-300 flex flex-col">
+            <article class="bg-surface rounded-xl p-6 md:p-8 soft-shadow transition-transform hover:-translate-y-1 duration-300 flex flex-col">
               <div class="flex justify-between items-start gap-4">
                 <div>
                   <h4 class="font-headline-sm text-headline-sm text-secondary">Dieptereinigingsbehandeling incl. epileren</h4>
@@ -578,13 +581,13 @@
                 <p>Behandeling voor de jonge, onzuivere en acne huid met producten op basis van pure, natuurlijke tea tree olie. Bestaat uit een reiniging, peeling om dode huidcellen te verwijderen, een dieptereiniging, warme compressen, huidanalyse, het verwijderen van alle onzuiverheden en eventuele gerstekorrels en een lichte epilatie van de wenkbrauwen (bij uitgebreid epileren geldt een meerprijs van € 5,-). U krijgt altijd een vrijblijvend huidadvies. Mogelijk in kuurverband (binnen ± 4 weken) met korting.</p>
               </div>
             </article>
-            <article class="bg-surface rounded-xl p-8 soft-shadow transition-transform hover:-translate-y-1 duration-300">
+            <article class="bg-surface rounded-xl p-6 md:p-8 soft-shadow transition-transform hover:-translate-y-1 duration-300">
               <div class="flex justify-between items-start gap-4">
                 <h4 class="font-headline-sm text-headline-sm text-secondary">Dieptereinigingsbehandeling excl. epileren</h4>
                 <span class="font-headline-sm text-headline-sm text-primary whitespace-nowrap">€ 50,00</span>
               </div>
             </article>
-            <article class="bg-surface rounded-xl p-8 soft-shadow transition-transform hover:-translate-y-1 duration-300 flex flex-col">
+            <article class="bg-surface rounded-xl p-6 md:p-8 soft-shadow transition-transform hover:-translate-y-1 duration-300 flex flex-col">
               <div class="flex justify-between items-start gap-4">
                 <div>
                   <h4 class="font-headline-sm text-headline-sm text-secondary">Basis gezichtsbehandeling</h4>
@@ -600,7 +603,7 @@
                 <p>Complete gezichtsbehandeling, afgestemd op uw huidtype en -conditie. Bestaat uit een reiniging, peeling, lysing of gommage om dode huidcellen te verwijderen, een dieptereiniging, warme compressen, huidanalyse, het verwijderen van onzuiverheden zoals meeëters en gerstekorrels, epileren of harsen van de wenkbrauwen, een uitgebreide gelaats-, hals-, decolleté-, nek- en schoudermassage met een aromatische, hydraterende en voedende olie of crème, een masker afgestemd op uw huid en een afsluiting met serum, oogcrème en dag-/nachtcrème. Inclusief vrijblijvend huidadvies. Eventueel aan te vullen met losse modules.</p>
               </div>
             </article>
-            <article class="bg-surface rounded-xl p-8 soft-shadow transition-transform hover:-translate-y-1 duration-300 flex flex-col">
+            <article class="bg-surface rounded-xl p-6 md:p-8 soft-shadow transition-transform hover:-translate-y-1 duration-300 flex flex-col">
               <div class="flex justify-between items-start gap-4">
                 <div>
                   <h4 class="font-headline-sm text-headline-sm text-secondary">Behandeling De Luxe</h4>
@@ -691,8 +694,10 @@
                 <div class="font-display-lg-mobile text-display-lg-mobile text-primary">€ 77,00</div>
               </div>
             </div>
-            <div class="lees-meer-inhoud hidden mt-8 pt-8 border-t border-outline-variant relative z-10 font-body-md text-body-md text-on-surface-variant max-w-3xl">
-              <p>Bij deze intensieve anti-aging behandeling wordt gewerkt met speciale maskers (o.a. rubber- en vliesmaskers) en ampullen met hoogwaardige werkstoffen die diep in de huid worden opgenomen, voor een beter en langduriger resultaat. Voor iedereen die de huid wil verbeteren en verstevigen. Bestaat uit een reiniging, peeling, lysing of gommage, warme compressen, huidanalyse, het verwijderen van onzuiverheden en gerstekorrels, epileren of harsen van de wenkbrauwen (eventueel ook bovenlip en kin), het aanbrengen van een ampul, een uitgebreide massage van gelaat, hals, decolleté, nek en schouders met een intensieve crème, een masker afgestemd op uw huid en een afsluiting met serum, oogcrème en dag-/nachtverzorging. De behandeling wordt aangepast aan uw huid en het seizoen. Inclusief vrijblijvend huidadvies. Aan te vullen met losse modules.</p>
+            <div class="lees-meer-inhoud hidden mt-8 pt-8 border-t border-outline-variant relative z-10 font-body-md text-body-md text-on-surface-variant max-w-3xl space-y-4">
+              <p>Bij deze intensieve anti-aging behandeling wordt gewerkt met speciale maskers (o.a. rubber- en vliesmaskers) en ampullen met hoogwaardige werkstoffen die diep in de huid worden opgenomen, voor een beter en langduriger resultaat. Voor iedereen die de huid wil verbeteren en verstevigen.</p>
+              <p>De behandeling bestaat uit een reiniging, peeling, lysing of gommage, warme compressen, huidanalyse, het verwijderen van onzuiverheden en gerstekorrels, epileren of harsen van de wenkbrauwen (eventueel ook bovenlip en kin), het aanbrengen van een ampul, een uitgebreide massage van gelaat, hals, decolleté, nek en schouders met een intensieve crème, een masker afgestemd op uw huid en een afsluiting met serum, oogcrème en dag-/nachtverzorging.</p>
+              <p>De behandeling wordt aangepast aan uw huid en het seizoen. Inclusief vrijblijvend huidadvies. Aan te vullen met losse modules.</p>
             </div>
           </article>
         </div>
@@ -785,7 +790,7 @@
             <h3 class="font-headline-md text-headline-md text-primary">Harsen, epileren &amp; verven</h3>
           </div>
           <p class="text-on-surface-variant mb-8 max-w-2xl">Losse behandelingen, óf voordeliger in combinatie met een gezichtsbehandeling.</p>
-          <div class="bg-surface rounded-xl p-6 md:p-8 soft-shadow overflow-x-auto">
+          <div class="hidden md:block bg-surface rounded-xl p-6 md:p-8 soft-shadow overflow-x-auto">
             <table class="w-full text-left border-collapse min-w-[460px]">
               <thead>
                 <tr class="border-b border-outline-variant">
@@ -868,6 +873,99 @@
               </tbody>
             </table>
           </div>
+
+          <!-- Mobiel: kaartjes i.p.v. tabel -->
+          <div class="md:hidden space-y-3">
+            <div class="bg-surface rounded-xl p-4 soft-shadow">
+              <p class="font-body-md text-body-md text-secondary mb-2">Epileren / harsen wenkbrauwen</p>
+              <div class="flex flex-wrap gap-2 font-label-caps text-label-caps">
+                <span class="px-3 py-1 bg-surface-container rounded-full text-primary">Los € 18,00</span>
+              </div>
+            </div>
+            <div class="bg-surface rounded-xl p-4 soft-shadow">
+              <p class="font-body-md text-body-md text-secondary mb-2">Harsen bovenlip of kin</p>
+              <div class="flex flex-wrap gap-2 font-label-caps text-label-caps">
+                <span class="px-3 py-1 bg-surface-container rounded-full text-primary">Los € 9,50</span>
+                <span class="px-3 py-1 bg-surface-container rounded-full text-primary">Bij gezichtsbeh. € 3,00</span>
+              </div>
+            </div>
+            <div class="bg-surface rounded-xl p-4 soft-shadow">
+              <p class="font-body-md text-body-md text-secondary mb-2">Harsen bovenlip &amp; kin</p>
+              <div class="flex flex-wrap gap-2 font-label-caps text-label-caps">
+                <span class="px-3 py-1 bg-surface-container rounded-full text-primary">Los € 17,50</span>
+                <span class="px-3 py-1 bg-surface-container rounded-full text-primary">Bij gezichtsbeh. € 5,00</span>
+              </div>
+            </div>
+            <div class="bg-surface rounded-xl p-4 soft-shadow">
+              <p class="font-body-md text-body-md text-secondary mb-2">Harsen gelaat</p>
+              <div class="flex flex-wrap gap-2 font-label-caps text-label-caps">
+                <span class="px-3 py-1 bg-surface-container rounded-full text-primary">Los € 20,00</span>
+                <span class="px-3 py-1 bg-surface-container rounded-full text-primary">Bij gezichtsbeh. € 10,00</span>
+              </div>
+            </div>
+            <div class="bg-surface rounded-xl p-4 soft-shadow">
+              <p class="font-body-md text-body-md text-secondary mb-2">Verven wimpers</p>
+              <div class="flex flex-wrap gap-2 font-label-caps text-label-caps">
+                <span class="px-3 py-1 bg-surface-container rounded-full text-primary">Bij gezichtsbeh. € 7,00</span>
+              </div>
+            </div>
+            <div class="bg-surface rounded-xl p-4 soft-shadow">
+              <p class="font-body-md text-body-md text-secondary mb-2">Verven wenkbrauwen</p>
+              <div class="flex flex-wrap gap-2 font-label-caps text-label-caps">
+                <span class="px-3 py-1 bg-surface-container rounded-full text-primary">Bij gezichtsbeh. € 7,00</span>
+              </div>
+            </div>
+            <div class="bg-surface rounded-xl p-4 soft-shadow">
+              <p class="font-body-md text-body-md text-secondary mb-2">Verven wimpers &amp; wenkbrauwen</p>
+              <div class="flex flex-wrap gap-2 font-label-caps text-label-caps">
+                <span class="px-3 py-1 bg-surface-container rounded-full text-primary">Los € 25,00</span>
+                <span class="px-3 py-1 bg-surface-container rounded-full text-primary">Bij gezichtsbeh. € 10,00</span>
+              </div>
+            </div>
+            <div class="bg-surface rounded-xl p-4 soft-shadow">
+              <p class="font-body-md text-body-md text-secondary mb-2">Paraffine hand- of voetpakking</p>
+              <div class="flex flex-wrap gap-2 font-label-caps text-label-caps">
+                <span class="px-3 py-1 bg-surface-container rounded-full text-primary">Bij gezichtsbeh. € 10,00</span>
+              </div>
+            </div>
+            <div class="bg-surface rounded-xl p-4 soft-shadow">
+              <p class="font-body-md text-body-md text-secondary mb-2">Harsen onder- of bovenbenen</p>
+              <div class="flex flex-wrap gap-2 font-label-caps text-label-caps">
+                <span class="px-3 py-1 bg-surface-container rounded-full text-primary">Los € 25,00</span>
+              </div>
+            </div>
+            <div class="bg-surface rounded-xl p-4 soft-shadow">
+              <p class="font-body-md text-body-md text-secondary mb-2">Harsen onder- en bovenbenen</p>
+              <div class="flex flex-wrap gap-2 font-label-caps text-label-caps">
+                <span class="px-3 py-1 bg-surface-container rounded-full text-primary">Los € 42,50</span>
+              </div>
+            </div>
+            <div class="bg-surface rounded-xl p-4 soft-shadow">
+              <p class="font-body-md text-body-md text-secondary mb-2">Harsen rug (mannen)</p>
+              <div class="flex flex-wrap gap-2 font-label-caps text-label-caps">
+                <span class="px-3 py-1 bg-surface-container rounded-full text-primary">Los € 25,00</span>
+              </div>
+            </div>
+            <div class="bg-surface rounded-xl p-4 soft-shadow">
+              <p class="font-body-md text-body-md text-secondary mb-2">Harsen onderarmen</p>
+              <div class="flex flex-wrap gap-2 font-label-caps text-label-caps">
+                <span class="px-3 py-1 bg-surface-container rounded-full text-primary">Los € 15,00</span>
+              </div>
+            </div>
+            <div class="bg-surface rounded-xl p-4 soft-shadow">
+              <p class="font-body-md text-body-md text-secondary mb-2">Harsen bikinilijn vanaf</p>
+              <div class="flex flex-wrap gap-2 font-label-caps text-label-caps">
+                <span class="px-3 py-1 bg-surface-container rounded-full text-primary">Los € 20,00</span>
+              </div>
+            </div>
+            <div class="bg-surface rounded-xl p-4 soft-shadow">
+              <p class="font-body-md text-body-md text-secondary mb-2">Harsen oksels</p>
+              <div class="flex flex-wrap gap-2 font-label-caps text-label-caps">
+                <span class="px-3 py-1 bg-surface-container rounded-full text-primary">Los € 15,00</span>
+              </div>
+            </div>
+          </div>
+
           <p class="mt-6 font-body-md text-body-md text-on-surface-variant/80 italic">Prijzen onder voorbehoud. U kunt bij ons pinnen.</p>
         </div>
       </div>
@@ -1036,6 +1134,11 @@
 
 </main>
 
+<!-- ============ Terug naar boven ============ -->
+<button id="back-to-top" aria-label="Terug naar boven" class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full bg-primary text-on-primary soft-shadow flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300 hover:bg-primary/90">
+  <span class="material-symbols-outlined">arrow_upward</span>
+</button>
+
 <!-- ============ FOOTER ============ -->
 <footer class="w-full pt-section-gap-desktop pb-12 bg-surface-container-high">
   <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-gutter max-w-container-max-width mx-auto">
@@ -1090,6 +1193,15 @@
       menuToggle.querySelector('.material-symbols-outlined').textContent = 'menu';
     });
   });
+
+  // ---- Terug naar boven ----
+  const backToTop = document.getElementById('back-to-top');
+  window.addEventListener('scroll', () => {
+    const show = window.scrollY > 600;
+    backToTop.classList.toggle('opacity-0', !show);
+    backToTop.classList.toggle('pointer-events-none', !show);
+  });
+  backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
   // ---- Active section highlighting ----
   const navLinks = document.querySelectorAll('.nav-link');
